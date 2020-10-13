@@ -1,12 +1,10 @@
 version: '3'
 services:
     api:
-        build:
-            context: .
-            dockerfile: Dockerfile
-            target: dev
+        build: .
+        command: uvicorn crawler_api.main:app --reload
         volumes:
-            - ./crawler_api/:/opt/code
+            - ./:/opt/code
         container_name: api-legal-process
         networks:
             - default
