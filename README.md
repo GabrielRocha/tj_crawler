@@ -29,6 +29,11 @@ Force build
 docker-compose up --build
 ```
 
+Run a sh into container
+```shell script
+docker-compose run api sh
+```
+
 ## Virtualenv
 Install python version using the [pyenv](https://github.com/pyenv/pyenv)
 ```shell script
