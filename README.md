@@ -55,3 +55,8 @@ Install the requirements
 ```shell script
 pip install -r requirements.txt
 ```
+
+Run tests
+```shell script
+pytest
+```
