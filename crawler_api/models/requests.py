@@ -38,5 +38,5 @@ class LegalProcess(BaseModel):
         r2 = round(int(f'{r1}{year}{segment}{unit}') % 97)
         r3 = round(int(f'{r2}{court}00') % 97)
         check_digit_calculated = 98 - (r3 % 97)
-        assert int(check_digit) == check_digit_calculated, f'Invalid Number. The check digit (DV) is not correct'
+        assert int(check_digit) == check_digit_calculated, 'Invalid Number. The check digit (DV) is not correct'
         return value
