@@ -14,3 +14,25 @@ class LegalProcess(BaseModel):
         if not is_full_match:
             raise ValueError('Invalid number format. Example: 1234567-12.1234.1.12.1234')
         return value
+
+    @validator('number')
+    def check_digit_validation(cls, value):
+        """
+        Check whether the check digit is correct.
+        Legal Process Number = 'NNNNNNN-DV.AAAA.J.TR.OOOO'
+        NNNNNNNAAAAJTROOOO Mod 97 Base 10 == DV
+        :param value:
+        :return: boolean
+        """
+        legal_process_id = int(value[:7])
+        check_digit = int(value[8:10])
+        year = value[11:15]
+        segment = value[16:17]
+        unit = value[18:20]
+        courts = value[21:]
+        r1 = round(legal_process_id % 97)
+        r2 = round(int(f'{r1}{year}{segment}{unit}') % 97)
+        r3 = round(int(f'{r2}{courts}00') % 97)
+        check_digit_calculated = 98 - (r3 % 97)
+        assert int(check_digit) == check_digit_calculated, f'Invalid Number. The check digit (DV) is not correct'
+        return value

@@ -25,8 +25,8 @@ def test_legal_process_number_field_regex_validation(value):
 
 
 def test_legal_process_creation():
-    legal_process = LegalProcess(number='1234567-12.1234.1.12.1234')
-    assert legal_process.number == '1234567-12.1234.1.12.1234'
+    legal_process = LegalProcess(number='1234567-69.1234.1.12.1234')
+    assert legal_process.number == '1234567-69.1234.1.12.1234'
 
 
 def test_legal_process_number_field_description():
@@ -35,3 +35,13 @@ def test_legal_process_number_field_description():
 
 def test_legal_process_number_field_example():
     assert LegalProcess.__fields__['number'].field_info.extra['example'] == '1234567-12.1234.1.12.1234'
+
+
+def test_check_digit_legal_process_number():
+    assert LegalProcess.check_digit_validation('1234567-69.1234.1.12.1234') == '1234567-69.1234.1.12.1234'
+
+
+def test_assert_error_for_invalid_check_digit_on_legal_process_number():
+    with pytest.raises(AssertionError) as error:
+        LegalProcess.check_digit_validation('1234567-12.1234.1.12.1234')
+    assert str(error.value) == 'Invalid Number. The check digit (DV) is not correct'
