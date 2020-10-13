@@ -45,3 +45,8 @@ def test_assert_error_for_invalid_check_digit_on_legal_process_number():
     with pytest.raises(AssertionError) as error:
         LegalProcess.check_digit_validation('1234567-12.1234.1.12.1234')
     assert str(error.value) == 'Invalid Number. The check digit (DV) is not correct'
+
+
+def test_property_unit_value():
+    legal_process = LegalProcess(number='1234567-69.1234.1.12.1234')
+    assert legal_process.court == '12'

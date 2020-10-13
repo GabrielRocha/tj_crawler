@@ -8,6 +8,10 @@ LEGAL_PROCESS_NUMBER_PATTERN = re.compile(r'^\d{7}-\d{2}\.\d{4}\.\d{1}\.\d{2}\.\
 class LegalProcess(BaseModel):
     number: str = Field(description='Valid format: XXXXXXXX-XX-XXXX.XX.XXXX', example='1234567-12.1234.1.12.1234')
 
+    @property
+    def court(self):
+        return self.number[18:20]
+
     @validator('number')
     def check_number(cls, value):
         is_full_match = LEGAL_PROCESS_NUMBER_PATTERN.fullmatch(value.upper())
@@ -29,10 +33,10 @@ class LegalProcess(BaseModel):
         year = value[11:15]
         segment = value[16:17]
         unit = value[18:20]
-        courts = value[21:]
+        court = value[21:]
         r1 = round(legal_process_id % 97)
         r2 = round(int(f'{r1}{year}{segment}{unit}') % 97)
-        r3 = round(int(f'{r2}{courts}00') % 97)
+        r3 = round(int(f'{r2}{court}00') % 97)
         check_digit_calculated = 98 - (r3 % 97)
         assert int(check_digit) == check_digit_calculated, f'Invalid Number. The check digit (DV) is not correct'
         return value
