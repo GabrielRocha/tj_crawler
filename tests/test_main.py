@@ -1,7 +1,12 @@
+from unittest.mock import Mock
+
 import pytest
+from asynctest import CoroutineMock, patch
 from fastapi.testclient import TestClient
 
 from crawler_api.main import app
+
+from tests.fixtures import CRAWLER_RESPONSE
 
 
 @pytest.fixture
@@ -51,3 +56,25 @@ def test_required_request_body_validation_on_legal_process_url(client):
         ]
     }
     assert response.json() == expected_payload
+
+
+def test_legal_process_url_response(client):
+    crawler_mock = Mock()
+    crawler_mock().execute = CoroutineMock(return_value=[CRAWLER_RESPONSE])
+    with patch('crawler_api.main.COURTS', {"12": crawler_mock}):
+        data = {'number': '1234567-69.1234.1.12.1234'}
+        response = client.post('/legal-process', json=data)
+    assert response.status_code == 200
+    expected_payload = {
+        'degrees': [CRAWLER_RESPONSE]
+    }
+    assert response.json() == expected_payload
+
+
+def test_select_crawler_by_courts_on_legal_process(client):
+    crawler_mock = Mock()
+    crawler_mock().execute = CoroutineMock(return_value=[CRAWLER_RESPONSE])
+    with patch('crawler_api.main.COURTS', {"12": None, "23": crawler_mock}):
+        data = {'number': '1234567-63.1234.1.23.1234'}
+        client.post('/legal-process', json=data)
+    crawler_mock().execute.assert_called_once_with(number='1234567-63.1234.1.23.1234')
