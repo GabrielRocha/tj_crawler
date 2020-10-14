@@ -3,6 +3,10 @@ from typing import List, Optional
 from pydantic import BaseModel, Field
 
 
+class Message(BaseModel):
+    message: str
+
+
 class Representatives(BaseModel):
     type_: str = Field(alias='type')
     name: str

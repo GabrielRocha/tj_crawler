@@ -1,9 +1,9 @@
 from aiohttp import ClientSession
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 from crawler_api.crawlers import COURTS
 from crawler_api.models.requests import LegalProcess
-from crawler_api.models.response import LegalProcessDetailResponse
+from crawler_api.models.response import LegalProcessDetailResponse, Message
 
 app = FastAPI(
     title='Legal Process Crawler',
@@ -14,9 +14,16 @@ app = FastAPI(
 )
 
 
-@app.post("/legal-process", response_model=LegalProcessDetailResponse, description='Get Legal Process detail')
+@app.post(
+    "/legal-process",
+    response_model=LegalProcessDetailResponse,
+    description='Get Legal Process detail',
+    responses={404: {"model": Message}}
+)
 async def show_legal_process_detail(legal_process: LegalProcess) -> LegalProcessDetailResponse:
     async with ClientSession() as session:
         crawler = COURTS[legal_process.court](session)
-        result = await crawler.execute(number=legal_process.number)
+        result = tuple(await crawler.execute(number=legal_process.number))
+    if not result:
+        raise HTTPException(status_code=404, detail="Legal Process not found")
     return LegalProcessDetailResponse(degrees=tuple(result))
