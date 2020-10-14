@@ -62,3 +62,8 @@ Run tests
 ```shell script
 pytest
 ```
+
+# API Doc
+To access the API documentation, you should access one of these links below.
+  * http://localhost:8000/redoc
+  * http://localhost:8000/doc
