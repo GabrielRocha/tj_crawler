@@ -63,7 +63,12 @@ Run tests
 pytest
 ```
 
+Run server
+```shell script
+uvicorn crawler_api.main:app --host 0.0.0.0 --reload
+```
+
 # API Doc
 To access the API documentation, you should access one of these links below.
   * http://localhost:8000/redoc
-  * http://localhost:8000/doc
+  * http://localhost:8000/docs
