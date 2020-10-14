@@ -1,0 +1,3560 @@
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+
+
+
+
+
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="https://bam.nr-data.net/1/b61bdf610d?a=100042430&amp;v=1184.ab39b52&amp;to=MlZRN0QECkMAVERZDgscYBdEEBBDIFREWQ4LHFERGAYLXU9EX1YVFV9SDRgWBVpPVEBfEgIdQBdEEBBDT1ZTRAgKXR0wUwQWUwl2U0QICl0%3D&amp;rst=1013&amp;ck=1&amp;ref=https://esaj.tjms.jus.br/cposg5/search.do&amp;ap=293&amp;be=761&amp;fe=989&amp;dc=918&amp;perf=%7B%22timing%22:%7B%22of%22:1602671796393,%22n%22:0,%22u%22:558,%22ue%22:558,%22f%22:7,%22dn%22:43,%22dne%22:43,%22c%22:43,%22s%22:99,%22ce%22:166,%22rq%22:167,%22rp%22:545,%22rpe%22:611,%22dl%22:560,%22di%22:918,%22ds%22:918,%22de%22:936,%22dc%22:989,%22l%22:989,%22le%22:990%7D,%22navigation%22:%7B%7D%7D&amp;fp=823&amp;fcp=823&amp;jsonp=NREUM.setToken"></script><script src="https://js-agent.newrelic.com/nr-1184.min.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script language="javascript" type="text/JavaScript" src="https://esaj.tjms.jus.br/sajcas/verificarLogin.js?script=1602671796882"></script>
+
+	<script language="javascript">
+		if(window.sajcas && window.sajcas.usuarioLogadoNoCasServer) {
+			var urlRetornoSistema = '';
+			if(urlRetornoSistema === '') {
+				urlRetornoSistema = window.location.href;
+			}
+
+			if(urlRetornoSistema.lastIndexOf('?') != -1) {
+				urlRetornoSistema += '&';
+			} else {
+				urlRetornoSistema += '?';
+			}
+			urlRetornoSistema+= 'gateway=true';
+			window.location.href = urlRetornoSistema;
+		}
+	</script>
+
+
+	<title>Portal de Serviços e-SAJ</title>
+	<!-- Adicionado aqui para não impactar mobile -->
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b61bdf610d",applicationID:"100042430"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script><link rel="stylesheet" href="/cposg5/softheme/src/css/app.css.pagespeed.ce.-8QKTCO_fv.css">
+	<link rel="stylesheet" href="/cposg5/softheme/src/fonts/saj/styles.css.pagespeed.ce.4TyEB75a7b.css">
+	<link rel="stylesheet" href="/cposg5/css/formulario.css.pagespeed.ce.IBKhh38MMg.css" type="text/css">
+
+	<link rel="stylesheet" href="/cposg5/webjars/select2/3.5.4/select2.css.pagespeed.ce.wYQG59h2Oz.css" type="text/css">
+	<link rel="stylesheet" href="/cposg5/webjars/select2/3.5.4/select2-bootstrap.css.pagespeed.ce.D-hw27pMHn.css" type="text/css">
+	<link rel="stylesheet" href="/cposg5/css/saj/select2/saj-select2.css.pagespeed.ce.jMcbltYYy7.css">
+
+
+
+<script>
+	window.saj = window.saj || {};
+	window.saj.env = window.saj.env || {};
+	window.saj.env.root = '/cposg5';
+	window.saj.env.css = '/cposg5/css';
+	window.saj.env.js = '/cposg5/js';
+	window.saj.env.imagens = '/cposg5/imagens';
+
+	window.saj.cpo = window.saj.cpo || {};
+	// transfere variavel se cpo esta rodando para totem
+	window.saj.cpo.totem = 'false' == 'true';
+
+	window.saj.cpo.instanciaConsulta = {
+		SG5: 'true' == 'true',
+		SG5TJ: 'false' == 'true',
+		SG5CR: 'true' == 'true',
+		value: 'SG5CR'
+	};
+</script>
+
+
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/jquery/jquery.min.js,qn=1620728708.pagespeed.ce.V5Dq1607on.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/jquery/jquery.func_toggle.js,qn=fc08b67b-2d85-4264-b3cc-df53d37063b0.pagespeed.ce.kWbT7Poepj.js"></script>
+	<script language="javascript" type="text/javascript" src="/cposg5/js/jquery/jquery.blockUI.min.js,qn=da9dcc49-ff44-496e-9451-a123d5902a23.pagespeed.ce.dErut7sK8n.js"></script>
+	<script language="javascript" type="text/javascript" src="/cposg5/js/jquery/jquery.browser.min.js,qn=0d8c0b73-5433-4b8a-b179-57b66a50e221.pagespeed.ce.2kH8uEOOrH.js"></script>
+
+	<script language="javascript" type="text/javascript" src="/cposg5/webjars/lodash/4.17.5/lodash.js,qn=81c6499c-af52-42b8-a2dd-549b672ed509.pagespeed.ce.oIonpy1cXj.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/select2/select2.js,qn=6d4de773-6204-4997-88a3-c170c8cdc1ee.pagespeed.ce.zZ9psLgV1M.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/webjars/select2/3.5.4/select2_locale_pt-BR.js,qn=0c4b6b05-0f46-4d26-b38b-5a5824e5be72.pagespeed.ce.rpaW4jIDfU.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-select2.js,qn=76378df4-82f7-463f-bcc9-6f539964705e.pagespeed.ce.i0CiDxrPr6.js"></script>
+
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-web-2.2.41-4.js,qn=eb5b2304-0cb3-4a50-9a35-91e95c382270.pagespeed.ce.KMWpT2PtBm.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-tooltip.js,qn=05d1ce7c-fc31-453f-99a1-67c9c740e116.pagespeed.ce.nxei5MjNSG.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-popup-modal-1.0.0-1.js,qn=61cbef8d-8c3a-4f9a-8897-598620759ad5.pagespeed.ce.w2CdRQkD1O.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-browser.js,qn=57eb3aac-963e-422c-984c-b2605d80b659.pagespeed.ce.Ys1SHmsBzP.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-mascara-input.js,qn=2a3b25af-1984-421a-9d9c-c25a68eda1a1.pagespeed.ce.NcnSLHfH3i.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/saj-numeroProcesso.js,qn=ce124019-a712-449d-ada1-1cd6faeebe9c.pagespeed.ce.2deanQRwwl.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj-cpo-cbpesquisa.js,qn=3374557194.pagespeed.ce.xbax6Py7iO.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/saj/acessibilidade/acessibilidade.js,qn=810c4d6e-f0ba-4ada-8ccb-4a7613be4eac.pagespeed.ce.fhW4Q10RpH.js"></script>
+
+
+	<script language="javascript" type="text/JavaScript" src="/cposg5/softheme/src/js/app.js,qn=16289891.pagespeed.ce.E6co7Hywap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js?n=009dd642-b240-4a68-8e7c-be1b43399af8" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js?n=1791337263" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<script>
+	(function($){
+		$(function(){
+			var intervalo = 115000;
+			$.saj.manterSessao('/cposg5/manterSessao.do', intervalo);
+		});
+
+	})(jQuery);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+	window.saj.cpo = window.saj.cpo || {};
+	window.saj.cpo.urlBaseAcessoRecursoProcessoParaUsuario = '/cposg5/autorizarAcessoRecursoProcessoParaUsuario.do?processoPK.cdProcesso=P0000IYYC0000&processoPK.cdForo=900&processoPK.tpOrigemProcesso=2&processoPK.flOrigem=S&processoPK.aliasDaBase=SG5TJ&numeroProcesso=0821901-51.2018.8.12.0001&cdVara=27';
+	window.saj.cpo.urlBaseAcessoRecursoMidiaAudienciaProcessoParaUsuario= '/cposg5/autorizarAcessoRecursoAudienciaGravada.do?processoPK.cdProcesso=P0000IYYC0000&processoPK.cdForo=900&processoPK.tpOrigemProcesso=2&processoPK.flOrigem=S&processoPK.aliasDaBase=SG5TJ&numeroProcesso=0821901-51.2018.8.12.0001&cdVara=27';
+	window.saj.cpo.urlBaseAcessoRecursoProcessoComSenha = '/cposg5/autorizarAcessoRecursoProcessoPorSenha.do?processoPK.cdProcesso=P0000IYYC0000&processoPK.cdForo=900&processoPK.tpOrigemProcesso=2&processoPK.flOrigem=S&processoPK.aliasDaBase=SG5TJ&numeroProcesso=0821901-51.2018.8.12.0001';
+	window.saj.cpo.abrirAutorizarAcessoRecursoProcessoPorSenha = '/cposg5/abrirAutorizarAcessoRecursoProcessoPorSenha.do?processoPK.cdProcesso=P0000IYYC0000&processoPK.cdForo=900&processoPK.tpOrigemProcesso=2&processoPK.flOrigem=S&processoPK.aliasDaBase=SG5TJ&numeroProcesso=0821901-51.2018.8.12.0001';
+</script>
+
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/acessoRecurso-2.10.2-0.js,qn=821347917.pagespeed.ce.l7SgStFM8J.js"></script>
+	<script language="javascript" type="text/JavaScript" src="/cposg5/js/acessoProcesso-2.10.2-0.js,qn=3127152735.pagespeed.ce.RP6KKKMLcK.js"></script>
+
+
+
+
+
+
+
+<script>
+	(function($){
+		$(function(){
+			var intervalo = 50000;
+			$.saj.manterSessao('/cposg5/manterSessao.do', intervalo);
+		});
+
+	})(jQuery);
+</script>
+
+
+
+
+
+
+	<!-- Correção temporária do alinhamento do divisor de seção de formulário do SPW -->
+	<script type="text/javascript">
+		$(function(){$('td[background$="spw/fundo_subtitulo2.gif"]').attr('valign', 'top')});
+	</script>
+<script language="javascript" type="text/JavaScript">
+	$.saj.getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)), sURLVariables = sPageURL.split('&'), sParameterName, i;
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+				if (sParameterName[0] === sParam) {
+					return sParameterName[1] === undefined ? true : sParameterName[1];
+				}
+		}
+	};
+  </script><script type="text/javascript">
+	(function($) {
+		$(function(){
+			var captcha = $.saj.getUrlParameter('uuidCaptcha');
+
+			if (!captcha) {
+				return;
+			}
+
+			var url = $('.processoPrinc').attr('href');
+			$('.processoPrinc').attr('href', url+'&uuidCaptcha='+captcha);
+
+			var $processoPaiApenso = $('.processoPaiApenso');
+            $processoPaiApenso.attr('href', $processoPaiApenso.attr('href') + '&uuidCaptcha=' + captcha);
+
+            var $incidente = $('.incidente');
+            $incidente.attr('href', $incidente.attr('href') + '&uuidCaptcha=' + captcha);
+		})
+	})(jQuery);
+</script></head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<body><input type="hidden" name="cdProcesso" value="P0000IYYC0000">
+
+
+
+
+
+
+<!-- HEADER-->
+<div class="unj-entity-header">
+
+
+
+
+
+
+<div class="unj-entity-header__actions">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md-4">
+                <a href="javascript:history.back();" class="unj-link-back">
+                    <i class="icon-back"></i>
+                </a>
+            </div>
+            <div class="col-13 col-md-12 unj-ta-r">
+                <!-- Pasta digital -->
+
+
+		       		<a class="linkPasta btn btn-secondary btn-space" title="Pasta Digital" href="#" name="">
+				        Visualizar autos
+	      			</a>
+
+                <!-- Peticionar -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="unj-entity-header__summary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-13">
+                <!--principal -->
+
+                    <span class="unj-larger-1">
+                        0821901-51.2018.8.12.0001
+                    </span>
+
+
+
+
+
+                <!-- incidente -->
+
+
+            </div>
+        </div>
+        <div class="row">
+
+                <div class="col-md-3">
+                    <span class="unj-label">Classe</span>
+                    <div class="lh-1-1 line-clamp__2"> <span title="Apelação Cível">Apelação Cível</span></div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <span class="unj-label">
+                        Assunto
+                    </span>
+                    <div class="lh-1-1 line-clamp__2"><span title="Obrigação de Fazer / Não Fazer">Obrigação de Fazer / Não Fazer</span></div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <span class="unj-label">Seção</span>
+                    <div class="lh-1-1 line-clamp__2"> <span title="Tribunal de Justiça">Tribunal de Justiça</span></div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <span class="unj-label">Órgão Julgador</span>
+                    <div class="lh-1-1 line-clamp__2"> <span title="4ª Câmara Cível">4ª Câmara Cível</span></div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <span class="unj-label">Área</span>
+                    <div class="lh-1-1 line-clamp__2"><span title="Cível">Cível</span></div>
+                </div>
+
+            <!-- Processo principal -->
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="unj-entity-header__details">
+    <div class="container">
+        <div class="unj-ta-r">
+            <a href="#maisDetalhes" class="unj-link-collapse" data-toggle="collapse" aria-expanded="true" aria-controls="maisDetalhes">
+                <span class="unj-link-collapse__show">
+                    <i class="unj-link-collapse__icon glyph glyph-chevron-down"></i>
+                    Mais
+                </span>
+                <span class="unj-link-collapse__hide">
+                    <i class="unj-link-collapse__icon glyph glyph-chevron-up"></i>
+                    Recolher
+                </span>
+            </a>
+        </div>
+        <div id="maisDetalhes" class="collapse show" aria-expanded="false" style="">
+            <div class="row unj-row--border-top">
+
+
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Relator</span>
+                        <div class="line-clamp__2"><span title="DES. LUIZ TADEU BARBOSA SILVA">DES. LUIZ TADEU BARBOSA SILVA</span></div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Valor da ação</span>
+                        <div class="line-clamp__2"><span title="10.000,00">10.000,00</span></div>
+                    </div>
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Outros números</span>
+                        <div class="line-clamp__2"><br>0821901-51.2018.8.12.0001</div>
+                    </div>
+
+
+
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Origem</span>
+                        <div class="line-clamp__2"><span title="Comarca de Campo Grande / Campo Grande / 3ª Vara de Fazenda Pública e de Registros Públicos">Comarca de Campo Grande / Campo Grande / 3ª Vara de Fazenda Pública e de Registros Públicos</span></div>
+                    </div>
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Volume / Apenso</span>
+                        <div class="line-clamp__2"><span title="1 / 0">1 / 0</span></div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 mb-2">
+                        <span class="unj-label">Observações </span>
+                        <div class="line-clamp__2"><span title="Pedido de justiça gratuita fls. 813">Pedido de justiça gratuita fls. 813</span></div>
+                    </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+  <div class="div-conteudo container unj-mb-40">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside class="aside-nav aside-nav--left">
+    <div class="aside-nav__inner">
+        <header class="aside-nav__main-menu__header"><span class="aside-nav__main-menu__header__text">  Menu e-SAJ</span>
+            <a href="#" class="aside-nav__user__close-button close-offcanvas">
+                <img src="https://esaj.tjms.jus.br/esaj/img/icons/icon-close--light.png.pagespeed.ce.Y1Hfi8Fe4D.png" alt="">
+            </a>
+        </header>
+        <nav class="aside-nav__main-menu">
+            <ul class="aside-nav__main-menu__list" id="conteudoMenuEsaj"><li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Consultas</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cpopg5/open.do" class="aside-nav__main-menu__list__item__link">Processos de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cposg5/open.do" class="aside-nav__main-menu__list__item__link">Processos de 2º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Pauta de Julgamento</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pauta-julgamento/consulta" class="aside-nav__main-menu__list__item__link">Consulta das Pautas de Julgamento de Segundo Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Ordem de Processos</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cop/abrirConsultaDeOrdemDeJulgamentoPg.do" class="aside-nav__main-menu__list__item__link">Julgamento de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cop/abrirConsultaDeOrdemDeAtoPg.do" class="aside-nav__main-menu__list__item__link">Publicação e Cumprimento de Atos de 1º Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Jurisprudência</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cjsg/consultaSimples.do" class="aside-nav__main-menu__list__item__link">Simples</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cjsg/consultaCompleta.do" class="aside-nav__main-menu__list__item__link">Completa</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cdje" class="aside-nav__main-menu__list__item__link">Diário da Justiça Eletrônico</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Recolhimento de Custas</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Custas de 1º Grau</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustas.do?cdTipoCusta=6&amp;flTipoCusta=0&amp;cdServicoCalculoCusta=690003" class="aside-nav__main-menu__list__item__link">Emitir Custas</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustas.do?cdTipoCusta=9&amp;flTipoCusta=1&amp;cdServicoCalculoCusta=690005" class="aside-nav__main-menu__list__item__link">Diligências de Oficial de Justiça</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustas.do?cdTipoCusta=11&amp;flTipoCusta=5&amp;cdServicoCalculoCusta=690004" class="aside-nav__main-menu__list__item__link">Serviços</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://www.tjms.jus.br/legislacao/visualizar.php?lei=32463" class="aside-nav__main-menu__list__item__link">Consulta à tabela de valor das diligências</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/abrirConsultaCustas.do" class="aside-nav__main-menu__list__item__link">Consulta de Custas</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://servicos.efazenda.ms.gov.br/crd/CreditoTributario/IndicadoresSefaz/uferms" class="aside-nav__main-menu__list__item__link">Link para consultar o valor da UFERMS</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Custas de 2º Grau</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustasSg.do?cdTipoCusta=23&amp;flTipoCusta=6&amp;cdServicoCalculoCusta=690202" class="aside-nav__main-menu__list__item__link">Emitir Preparo de Recursos</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustasSg.do?cdTipoCusta=9&amp;flTipoCusta=1&amp;cdServicoCalculoCusta=690209" class="aside-nav__main-menu__list__item__link">Diligências de Oficial de Justiça</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustasSg.do?cdTipoCusta=6&amp;flTipoCusta=0&amp;cdServicoCalculoCusta=690015" class="aside-nav__main-menu__list__item__link">Emitir Custas Iniciais</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://www.tjms.jus.br/legislacao/visualizar.php?lei=32463" class="aside-nav__main-menu__list__item__link">Consulta à tabela de valor das diligências</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/abrirConsultaCustasSg.do" class="aside-nav__main-menu__list__item__link">Consulta de Custas</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustasSg.do?cdTipoCusta=11&amp;flTipoCusta=5&amp;cdServicoCalculoCusta=690203" class="aside-nav__main-menu__list__item__link">Serviços</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Custas dos Juizados</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustas.do?cdTipoCusta=17&amp;flTipoCusta=1&amp;cdServicoCalculoCusta=690011" class="aside-nav__main-menu__list__item__link">Emitir custas / Preparo</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/ccpweb/iniciarCalculoDeCustas.do?cdTipoCusta=28&amp;flTipoCusta=1&amp;cdServicoCalculoCusta=690012" class="aside-nav__main-menu__list__item__link">Link para recolhimento do FUNADEP - Fora de uso</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://servicos.efazenda.ms.gov.br/crd/CreditoTributario/IndicadoresSefaz/uferms" class="aside-nav__main-menu__list__item__link">Link para consultar o valor da UFERMS</a>
+</li>
+</ul></li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Peticionamento Eletrônico</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petpg/abrirNovaPeticaoInicial.do?instancia=PG" class="aside-nav__main-menu__list__item__link">Peticionamento Inicial de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petpg/abrirNovaPeticaoIntermediaria.do?instancia=PG" class="aside-nav__main-menu__list__item__link">Peticionamento Intermediário de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petpg/abrirConsultaPeticoes.do" class="aside-nav__main-menu__list__item__link">Consulta de Petições de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pettr/abrirNovaPeticaoInicial.do?instancia=CR" class="aside-nav__main-menu__list__item__link">Peticionamento Inicial nas Turmas Recursais</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pettr/abrirNovaPeticaoIntermediaria.do?instancia=CR" class="aside-nav__main-menu__list__item__link">Peticionamento Intermediário nas Turmas Recursais</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pettr/abrirConsultaPeticoes.do" class="aside-nav__main-menu__list__item__link">Consulta de Petições nas Turmas Recursais</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petsg/abrirNovaPeticaoInicial.do?instancia=SG" class="aside-nav__main-menu__list__item__link">Peticionamento Inicial de 2º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petsg/abrirNovaPeticaoIntermediaria.do?instancia=SG" class="aside-nav__main-menu__list__item__link">Peticionamento Intermediário de 2º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/petsg/abrirConsultaPeticoes.do" class="aside-nav__main-menu__list__item__link">Consulta de Petições de 2º Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Push - Acompanhar Processo Judicial</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/push" class="aside-nav__main-menu__list__item__link">1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pushsg5tr" class="aside-nav__main-menu__list__item__link">2º Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Intimação e Citação Eletrônica</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/intimacoesweb/abrirConsultaAtosNaoRecebidos.do" class="aside-nav__main-menu__list__item__link">Recebimento</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/intimacoesweb/abrirConsultaAtosRecebidos.do" class="aside-nav__main-menu__list__item__link">Consulta das Recebidas</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Certidões</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/sco/abrirCadastro.do" class="aside-nav__main-menu__list__item__link">Pedido de Certidão de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/scosg/abrirCadastro.do" class="aside-nav__main-menu__list__item__link">Pedido de Certidão de 2º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/sco/abrirConferencia.do" class="aside-nav__main-menu__list__item__link">Conferência de Certidão de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/scosg/abrirConferencia.do" class="aside-nav__main-menu__list__item__link">Conferência de Certidão de 2º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/sco/abrirDownload.do" class="aside-nav__main-menu__list__item__link">Baixar Certidão de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/scosg/abrirDownload.do" class="aside-nav__main-menu__list__item__link">Baixar Certidão de 2º Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item has__menu__children"><a href="#" class="aside-nav__main-menu__list__item__link">Conferência de Documentos</a>
+<ul class="aside-nav__main-menu__list__item menu__children"><li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pastadigital/pg/abrirConferenciaDocumento.do" class="aside-nav__main-menu__list__item__link">Documento Digital de 1º Grau</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/pastadigital/sgcr/abrirConferenciaDocumento.do" class="aside-nav__main-menu__list__item__link">Documento Digital de 2º Grau</a>
+</li>
+</ul></li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/cpa" class="aside-nav__main-menu__list__item__link">Pauta de Audiência</a>
+</li>
+<li class="aside-nav__main-menu__list__item"><a href="https://esaj.tjms.jus.br/administracao/abrirPortalAdministracao.do" class="aside-nav__main-menu__list__item__link">ADM e-SAJ</a>
+</li><script>if (window.parent == window) {(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-162743098-1', 'auto', {'siteSpeedSampleRate': 100});ga('send', 'pageview');}</script></ul>
+        </nav>
+        <div id="esaj-beta-switcher-placeholder"></div>
+    </div>
+</aside>
+<aside class="aside-nav aside-nav--right aside-nav__user">
+    <div class="aside-nav__inner">
+        <div class="aside-nav__user__sign">
+            <div class="aside-nav__user__sign__brand">
+                <img src="https://esaj.tjms.jus.br/esaj/img/aside/brasoes/br-tjms.jpg.pagespeed.ce.swFjOLMXLY.jpg" alt="">
+            </div>
+            <ul class="aside-nav__user__sign__list">
+                <li><span class="aside-nav__user__sign__place">Tribunal de Justiça do Estado do Mato Grosso do Sul</span></li>
+            </ul>
+            <a href="#" class="aside-nav__user__close-button close-offcanvas">
+                <img src="https://esaj.tjms.jus.br/esaj/img/icons/icon-close--dark.png.pagespeed.ce.T1dAty3wXj.png" alt="">
+            </a>
+        </div>
+        <hr>
+        <div class="aside-nav__user__info">
+            <h4 class="aside-nav__user__title">Minha conta</h4>
+            <ul class="aside-nav__user__info__list">
+                <li class="aside-nav__user__info__list__item"><span class="aside-nav__user__info__name" id="menuNmUsuarioLogado"></span></li>
+                <li class="aside-nav__user__info__list__item"><span class="aside-nav__user__info__oab" id="menuUsuarioOabs">OAB: </span></li>
+            </ul>
+            <ul class="aside-nav__user__info__list-access">
+                <li class="aside-nav__user__info__list-access__item"><a class="aside-nav__user__info__list-access__item__link" href="https://esaj.tjms.jus.br/esaj/cadastro.do">Meu perfil</a></li>
+
+                    <li class="aside-nav__user__info__list-access__item"><a class="aside-nav__user__info__list-access__item__link" href="https://esaj.tjms.jus.br/caixapostal">Caixa Postal</a></li>
+
+                <li class="aside-nav__user__info__list-access__item"><a class="aside-nav__user__info__list-access__item__link" id="logoutLink" href="#">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<header>
+    <link rel="shortcut icon" href="https://esaj.tjms.jus.br/esaj/tema/padrao/clientes/MS/imagens/favicon.ico" type="image/x-icon">
+    <link href="https://esaj.tjms.jus.br/esaj/app.css.pagespeed.ce.VBQMbiboS9.css" rel="stylesheet" type="text/css">
+    <nav class="header__navbar">
+        <a class="header__navbar__menu-hamburger open__aside-nav--left navbar-menu-hamburger__item__link">
+            <span class="menu-hamburger__alert" style="display:none;"></span>
+            <span class="glyph glyph-hamburger"></span>
+        </a>
+
+        <h1 class="header__navbar__title" href=""><a class="linkLogo" href="https://esaj.tjms.jus.br/esaj/redirecionarNovoEsaj.do"><strong>e-SAJ</strong></a> | Consulta de Processos de 2º Grau</h1>
+
+        <ul class="header__navbar__menu header__navbar__menu--right">
+            <li class="header__navbar__menu__item header__navbar__menu__item--initials">
+                <a class="header__navbar__brand__initials" href="https://www.tjms.jus.br"> TJMS </a>
+            </li>
+            <li class="header__navbar__menu__item header__navbar__menu__item--user">
+               <span class="header__navbar__name open__aside-nav--right">
+                     <span id="headerNmUsuarioLogado" class="header__navbar__name__text">Identificar-se </span>
+                     <span class="glyph glyph-contact header__navbar__name__icon"></span>
+               </span>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="offcanvas-backdrop"></div>
+
+
+<script>
+    var dict = {
+        'certificado.tituloCertificadoDigital': 'Certificado digital',
+        'certificado.msgCarregandoCertificado': 'Carregando certificados...',
+        'certificado.msgNenhumCertificadoEncontrado': 'Nenhum certificado encontrado',
+        'certificado.msgErroCarregarCertificado': 'Erro ao carregar certificados',
+        'certificado.msgCertificadoExpirado': '[Expirado]',
+        'certificado.msgCertificadoNaoValido': '[Ainda não válido]',
+        'certificado.msgCertificadoNaoIcpBrasil': '[Não ICP-Brasil]',
+        'certificado.tituloProblemasAoAssinar': 'Falha de comunicação com o dispositivo de assinatura digital',
+
+        'label.contato': 'Contato',
+        'label.identificarSe': 'Identificar-se ',
+
+        'mensagem.aguarde': 'Por favor, aguarde.',
+        'mensagem.paginaNaoCarregada': 'Não foi possível carregar a página.',
+        'mensagem.marcarLido': 'Marcar como lido',
+        'mensagem.registrosSelecionados': 'Registros selecionados',
+        'mensagem.registroJaSelecionado': 'Este registro já está selecionado',
+
+        'mensagem.data.invalida': 'A data digitada é inválida.',
+        'mensagem.data.anoInvalido': 'O ano informado deve ser maior que',
+        'mensagem.data.mesInvalido': 'O mês não pode ser maior que 12.',
+        'mensagem.data.mes': 'O mês',
+        'mensagem.data.mesMaior29dias': 'não pode ter mais que 29 dias.',
+        'mensagem.data.mesMaior28dias': 'não pode ter mais que 28 dias.',
+        'mensagem.data.mesMaior31dias': 'não pode ter mais que 31 dias.',
+        'mensagem.data.mesMaior30dias': 'não pode ter mais que 30 dias.',
+
+        'mensagem.email.invalido': 'O formato do endereço de e-mail não é válido. Verifique se ele tem o formato "usuario@dominio".',
+        'mensagem.email.caracteresInvalidos': 'O endereço de e-mail possui caracteres inválidos',
+        'mensagem.email.usuarioInvalido': 'O formato do usuário informado no endereço de e-mail não é válido.',
+        'mensagem.email.ipInvalido': 'O endereço IP informado no endereço de e-mail não é válido.',
+        'mensagem.email.dominioInvalido': 'O formato do domínio informado no endereço de e-mail não é válido.',
+        'mensagem.email.dominioIncompleto': 'O domínio informado no endereço de e-mail deve possuir pelo menos duas partes. Por exemplo: "usuario@empresa.com.br".',
+
+        'mensagem.texto.tamanhoInvalido': 'O tamanho do texto digitado é maior do que o tamanho permitido. Tamanho permitido:',
+        'mensagem.texto.caracter': 'O caracter',
+        'mensagem.texto.caracterPosicaoInvalida': 'não está permitido na posição',
+
+        'mensagem.numero.numeroInvalido': 'O valor digitado não é um número válido.',
+        'mensagem.numero.numeroNaoPodeCasasDecimais': 'O número não pode conter casas decimais',
+        'mensagem.numero.numeroCasaDecimaisInvalidas': 'O número de casas decimais é inválido. O número pode conter apenas',
+        'mensagem.numero.casaDecimais': 'casas decimais',
+        'mensagem.numero.numeroInteiroInvalido': 'O número de dígitos inteiros é inválido. O número pode conter apenas',
+        'mensagem.numero.digitosInteiros': 'dígitos inteiros',
+        'mensagem.numero.numeroTamanhoInvalido': 'O número digitado não pode ser maior que',
+        'mensagem.numero.numeroZeroInvalido': 'O número digitado deve ser diferente de zero.'
+    }
+</script>
+
+
+<script>
+    var appEsajLayout = appEsajLayout || {};
+    appEsajLayout.urlNovoMenuHtml = 'https://esaj.tjms.jus.br/esaj/menuPortalV2Html.do';
+
+    var appEsajCas = appEsajCas || {};
+    appEsajCas.urlServicoConteudoIdentificacao = 'https://esaj.tjms.jus.br/sajcas/conteudoIdentificacaoJson?script=1599733713380&retorno=' + encodeURIComponent(location.href);
+</script>
+<script src="https://esaj.tjms.jus.br/esaj/js/portalV2-bundle.js,qn=326198062.pagespeed.ce.5LMFC6iVi6.js"></script>
+
+<script src="https://esaj.tjms.jus.br/sajcas/seletorVersaoBeta.js?n=289e917a-35a4-4a84-8b75-fe4800e8fe56&amp;versao=2"></script>
+<script>if (window.parent == window) {(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-162743098-1', 'auto', {'siteSpeedSampleRate': 100});ga('send', 'pageview');}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Apensos / Vinculados</h2>
+
+
+</div>
+	<!--  Tabela de (apensos) -->
+	<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+
+
+				<tbody><tr>
+					 <td colspan="3" align="left">Não há processos apensos ou vinculados para este processo.</td>
+				</tr>
+
+
+	</tbody></table>
+	<!-- Tabela de (apensos) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Números de 1ª Instância</h2>
+
+
+</div>
+
+
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+
+	  <tbody><tr class="label">
+	    <td align="left" valign="top" width="200">Nº de 1ª instância</td>
+		<td align="left" valign="top" width="250">Foro</td>
+		<td align="left" valign="top" width="200">Vara</td>
+		<td align="left" valign="top" width="250">Juiz</td>
+		<td align="left" valign="top" width="*">Obs.</td>
+	  </tr>
+	  <tr class="fundoEscuro" height="2">
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+
+
+
+</tbody></table>
+
+
+
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+	  <tbody><tr class="fundoClaro">
+	    <td align="left" valign="top" width="200">
+
+
+					<a href="https://esaj.tjms.jus.br/cpopg5/show.do?processo.codigo=01001ZB2W0000" target="_blank">0821901-51.2018.8.12.0001</a> (Principal)
+
+
+
+	    </td>
+		<td align="left" valign="top" width="250">
+	      Campo Grande
+	    </td>
+		<td align="left" valign="top" width="200">
+	      3ª Vara de Fazenda Pública e de Registros Públicos
+	    </td>
+	    <td align="left" valign="top" width="250">
+	      Zidiel Infantino Coutinho
+		</td>
+		<td align="left" valign="top">
+	      -
+		</td>
+	  </tr>
+
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+			<h2 class="subtitle">Partes do Processo</h2>
+
+
+</div>
+
+<!--  cabecalho da tabela de lista (partes) -->
+
+
+<!--  dados da lista partes principais (partes) -->
+<table id="tablePartesPrincipais" style="margin-left:15px; margin-top:1px;" align="center" border="0" cellpadding="0" cellspacing="0" width="98%">
+
+
+
+
+
+
+
+
+<tbody><tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelante:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Leidi Silva Ormond Galvão
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Adriana Catelan Skowronski                                                                                              <input type="hidden" value="10227MS">&nbsp;
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Ana Silvia Pessoa Salgado Moura                                                                                         <input type="hidden" value="7317MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelado:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Estado de Mato Grosso do Sul
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Proc. do Estado:&nbsp;</span>Nathália dos Santos Paes de Barros                                                                                      <input type="hidden" value="10233MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+</tbody></table>
+
+
+	<!--  dados da lista todas as partes (partes) -->
+	<table id="tableTodasPartes" style="margin-left:15px; margin-top:1px; display: none; " align="center" width="98%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+
+
+
+
+
+<tbody><tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelante:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Leidi Silva Ormond Galvão
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Adriana Catelan Skowronski                                                                                              <input type="hidden" value="10227MS">&nbsp;
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Ana Silvia Pessoa Salgado Moura                                                                                         <input type="hidden" value="7317MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelante:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Melissa Chaves Miranda
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Adriana Catelan Skowronski                                                                                              <input type="hidden" value="10227MS">&nbsp;
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Ana Silvia Pessoa Salgado Moura                                                                                         <input type="hidden" value="7317MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelante:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Ruzymar Campos de Oliveira
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Adriana Catelan Skowronski                                                                                              <input type="hidden" value="10227MS">&nbsp;
+
+
+   	 	 <br><span class="mensagemExibindo">Advogada:&nbsp;</span>Ana Silvia Pessoa Salgado Moura                                                                                         <input type="hidden" value="7317MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro">
+    <td valign="top" width="141" style="padding-bottom: 5px" class="label">
+      <span class="mensagemExibindo">Apelado:&nbsp;</span>
+    </td>
+    <td width="*" align="left" style="padding-bottom: 5px">
+
+	     Estado de Mato Grosso do Sul
+
+
+
+
+   	 	 <br><span class="mensagemExibindo">Proc. do Estado:&nbsp;</span>Nathália dos Santos Paes de Barros                                                                                      <input type="hidden" value="10233MS">&nbsp;
+
+
+
+  	 </td>
+</tr>
+
+
+	</tbody></table>
+	<div id="divLinksTituloBlocoPartes" style="text-align:right">
+
+
+
+
+
+
+
+
+<input id="mensagemNaoExibidapartes" type="hidden" value="">
+<input id="linkNaoExibidopartes" type="hidden" value="<span id=&quot;setasDireitapartes&quot; class=&quot;setasDireita&quot;><i class=&quot;unj-link-collapse__icon glyph glyph-chevron-up&quot;></i></span>Recolher">
+
+<span id="mensagensExibindopartes" class="mensagemExibindo">
+
+</span> &nbsp;
+<a id="linkpartes" href="javascript:" class="linkNaoSelecionado unj-link-collapse">
+    <span id="setasDireitapartes" class="setasDireita">
+        <i class="unj-link-collapse__icon glyph glyph-chevron-down"></i>
+    </span>
+    Mais</a>
+
+<script>
+	$(function() {
+		var controlarLink = function() {
+			var $linkNaoExibido = $('input#linkNaoExibidopartes');
+			var conteudoLinkNaoApresentado = $linkNaoExibido.val();
+			var $link = $('a#linkpartes');
+
+			$linkNaoExibido.val($link.html());
+			$link.html(conteudoLinkNaoApresentado);
+		};
+
+		var controlarMensagem = function() {
+			var $mensagemNaoExibida = $('input#mensagemNaoExibidapartes');
+			var $spanMensagem = $('span#mensagensExibindopartes');
+			var mensagemExibida = $spanMensagem.html();
+			var mensagemNaoExibida = $mensagemNaoExibida.val();
+
+			$spanMensagem.html(mensagemNaoExibida);
+			$mensagemNaoExibida.val(mensagemExibida);
+		};
+
+		var controlarMensagemLink = function() {
+			controlarMensagem();
+			controlarLink();
+		};
+
+		var esconderElementosExtrasMostrarDefault = function() {
+			$('#tableTodasPartes').hide();
+			$('#tablePartesPrincipais').show();
+		};
+
+		var mostrarElementosExtrasEsconderDefault = function() {
+			$('#tablePartesPrincipais').hide();
+			$('#tableTodasPartes').show();
+		};
+
+		var initPagina = function() {
+            var setasDireita = '<span id="setasDireitapartes" class="setasDireita"><i class="unj-link-collapse__icon glyph glyph-chevron-up"></i></span>';
+			var $linkEscondido = $('input#linkNaoExibidopartes');
+			$linkEscondido.val(setasDireita+$linkEscondido.val());
+		};
+
+		var bindLink = function() {
+			var $link = $('a#linkpartes');
+			$link.funcToggle('click', mostrarElementosExtrasEsconderDefault, esconderElementosExtrasMostrarDefault);
+			$link.bind('click', controlarMensagemLink);
+		};
+
+		initPagina();
+		bindLink();
+		esconderElementosExtrasMostrarDefault();
+	});
+</script>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+
+
+
+
+
+
+
+			<h2 class="subtitle">Movimentações</h2>
+
+
+</div>
+
+
+
+
+<table style="margin-left:15px; margin-top:1px;" align="center" border="0" cellpadding="0" cellspacing="0" width="98%">
+
+
+			<thead>
+				<tr>
+				  <th width="120" class="label" style="vertical-align: bottom">Data</th>
+				  <th valign="middle" width="20" aria-hidden="true">&nbsp;</th>
+				  <th valign="middle" class="label">Movimento</th>
+				</tr>
+				<tr class="fundoEscuro" height="2" aria-hidden="true">
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</thead>
+
+
+			<tbody id="tabelaUltimasMovimentacoes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				08/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação de Pauta de Julgamento
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJ º 4593 de 08 de outubro de 2020</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				07/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=49" name="M" cddocumento="49">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=49" name="M" cddocumento="49">
+	        			Certidão de Inclusão em Pauta
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">SEASE - certidão de intimação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				06/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=48" name="M" cddocumento="48">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=48" name="M" cddocumento="48">
+	        			Certidão
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">SEASE - Certidão de Julgamento</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				06/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Julgamento Adiado
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Julgamento adiado para a sessão de 20/10/2020 por indicação do Relator.  Próxima pauta: 20/10/2020 14:00</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				28/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação de Pauta de Julgamento
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJ nº 4585 de 28 de setembro de 2020</span>
+
+
+		  </td>
+		</tr>
+
+
+			</tbody>
+
+
+			<tbody style="display: none;" id="tabelaTodasMovimentacoes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				08/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação de Pauta de Julgamento
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJ º 4593 de 08 de outubro de 2020</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				07/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=49" name="M" cddocumento="49">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=49" name="M" cddocumento="49">
+	        			Certidão de Inclusão em Pauta
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">SEASE - certidão de intimação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				06/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=48" name="M" cddocumento="48">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=48" name="M" cddocumento="48">
+	        			Certidão
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">SEASE - Certidão de Julgamento</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				06/10/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Julgamento Adiado
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Julgamento adiado para a sessão de 20/10/2020 por indicação do Relator.  Próxima pauta: 20/10/2020 14:00</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				28/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação de Pauta de Julgamento
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJ nº 4585 de 28 de setembro de 2020</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				25/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=45" name="M" cddocumento="45">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=45" name="M" cddocumento="45">
+	        			Certidão de Inclusão em Pauta
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">SEASE - certidão de intimação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				21/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Inclusão em Pauta
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Para 06/10/2020</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				21/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Retorno da Conclusão para Pautar
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;"></span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				09/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=42" name="M" cddocumento="42">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=42" name="M" cddocumento="42">
+	        			Concluso ao Relator
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Aos 9 de setembro de 2020, faço estes autos conclusos ao(à) RELATOR(A). Para constar eu, Andressa Helena Ferrari Menezes, lavrei e subscrevi a presente.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				08/09/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Juntada de Petição Realizada
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº Protocolo: WTJM.20.01868485-8
+Tipo da Petição: Manifestação do Autor
+Data: 08/09/2020 15:05
+</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				11/08/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=37" name="M" cddocumento="37">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=37" name="M" cddocumento="37">
+	        			Certidão de decurso de prazo sem oposição ao Julgamento Virtual
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">CERTIFICO, para os devidos fins, que houve decurso do prazo para manifestação para oposição ao julgamento virtual, previsto no Art. 1º, §1º, II do Provimento-CSM n.º 411 de 12/06/2018. Para constar eu, Andrea Fava Santos, Diretora de Departamento, lavrei e subscrevi a presente em 11 de agosto de 2020.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				06/08/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Juntada de Petição Realizada
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº Protocolo: WTJM.20.01858946-4
+Tipo da Petição: Manifestação do Autor
+Data: 06/08/2020 18:20
+</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				27/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=32" name="M" cddocumento="32">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=32" name="M" cddocumento="32">
+	        			Certidão de Publicação - DJE
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJE - TJMS - Certidão Automática de Publicação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				27/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Publicado em 27/07/2020
+Número do Diário Eletrônico: 4543
+Teor do ato: Desta forma, defiro o pedido de parcelamento, na forma solicitada, condicionado o recebimento do recurso ao pagamento integral do preparo. Intimem-se.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				24/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Remessa à Imprensa Oficial
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº do lote: 2020008608
+Enviado em: 24/07/2020
+Teor do ato: Desta forma, defiro o pedido de parcelamento, na forma solicitada, condicionado o recebimento do recurso ao pagamento integral do preparo. Intimem-se.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				22/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Retorno do autos da conclusão
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;"></span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				22/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=27" name="M" cddocumento="27">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=27" name="M" cddocumento="27">
+	        			Proferido despacho de mero expediente
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Desta forma, defiro o pedido de parcelamento, na forma solicitada, condicionado o recebimento do recurso ao pagamento integral do preparo. Intimem-se.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				21/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=26" name="M" cddocumento="26">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=26" name="M" cddocumento="26">
+	        			Concluso ao Relator
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Aos 21 de julho de 2020, faço estes autos conclusos ao(à) RELATOR(A). Para constar eu, Andressa Helena Ferrari Menezes, lavrei e subscrevi a presente.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				21/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Juntada de Petição Realizada
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº Protocolo: WTJM.20.01853472-4
+Tipo da Petição: Manifestação do Autor
+Data: 21/07/2020 17:05
+</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				16/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Publicado em 16/07/2020
+Número do Diário Eletrônico: 4536
+Teor do ato: Posto isso, mantenho a sentença na parte que revogou a gratuidade da justiça às apelantes. Concedo às apelantes o prazo de 5 (cinco) dias para que façam prova do recolhimento das despesas processuais que deveriam ter adiantado (parágrafo único do art. 100, CPC - custas processuais) e do preparo do recurso (§ 2º, art. 101, CPC), sob pena de seu não conhecimento.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				16/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=21" name="M" cddocumento="21">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=21" name="M" cddocumento="21">
+	        			Certidão de Publicação - DJE
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJE - TJMS - Certidão Automática de Publicação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				15/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Remessa à Imprensa Oficial
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº do lote: 2020008176
+Enviado em: 15/07/2020
+Teor do ato: Posto isso, mantenho a sentença na parte que revogou a gratuidade da justiça às apelantes. Concedo às apelantes o prazo de 5 (cinco) dias para que façam prova do recolhimento das despesas processuais que deveriam ter adiantado (parágrafo único do art. 100, CPC - custas processuais) e do preparo do recurso (§ 2º, art. 101, CPC), sob pena de seu não conhecimento.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				15/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Retorno do autos da conclusão
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;"></span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				15/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=17" name="M" cddocumento="17">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=17" name="M" cddocumento="17">
+	        			Assistência Judiciária Gratuita não concedida a "nome da parte".
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Posto isso, mantenho a sentença na parte que revogou a gratuidade da justiça às apelantes. Concedo às apelantes o prazo de 5 (cinco) dias para que façam prova do recolhimento das despesas processuais que deveriam ter adiantado (parágrafo único do art. 100, CPC - custas processuais) e do preparo do recurso (§ 2º, art. 101, CPC), sob pena de seu não conhecimento.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				12/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Juntada de Petição Realizada
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº Protocolo: WTJM.20.02239012-0
+Tipo da Petição: Manifestação do Procurador da Fazenda Pública Estadual
+Data: 12/07/2020 19:06
+</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				08/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=13" name="M" cddocumento="13">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=13" name="M" cddocumento="13">
+	        			Certidão
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">INTEGRAÇÃO - Certidão de Remessa da Intimação para o Portal Eletrônico</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				07/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=11" name="M" cddocumento="11">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=11" name="M" cddocumento="11">
+	        			Julgamento Virtual - Intimação à Procuradoria Geral do Estado - PGE
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">JULGAMENTO VIRTUAL. Processo incluído automaticamente em pauta de julgamento virtual. Fica a Procuradoria-Geral do Estado intimada para, querendo, apresentar oposição a esta forma de julgamento nos termos do art. 1º do Provimento-CSM n. 411/2018. Certidão emitida automaticamente pelo sistema em 7 de julho de 2020.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				07/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=10" name="M" cddocumento="10">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=10" name="M" cddocumento="10">
+	        			Certidão de Publicação - DJE
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">DJE - TJMS - Certidão Automática de Publicação</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				07/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Publicação
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Publicado em 07/07/2020
+Número do Diário Eletrônico: 4529
+Teor do ato: Realizada Distribuição do processo por Sorteio em 06/07/2020. Processo incluso automaticamente em pauta de Julgamento Virtual. Ficam as partes intimadas para, querendo, apresentar oposição a esta forma de julgamento nos termos do art. 1º do Provimento-CSM n. 411/2018.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				06/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Remessa à Imprensa Oficial
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Nº do lote: 2020007721
+Enviado em: 06/07/2020
+Teor do ato: Realizada Distribuição do processo por Sorteio em 06/07/2020. Processo incluso automaticamente em pauta de Julgamento Virtual. Ficam as partes intimadas para, querendo, apresentar oposição a esta forma de julgamento nos termos do art. 1º do Provimento-CSM n. 411/2018.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				06/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=6" name="M" cddocumento="6">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=6" name="M" cddocumento="6">
+	        			Concluso ao Relator
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Aos 6 de julho de 2020, faço estes autos conclusos ao(à) RELATOR(A). Para constar eu, SAJ, lavrei e subscrevi a presente.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				06/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+				<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=5" name="M" cddocumento="5">
+		  			<img src="/cposg5/imagens/doc2.gif.pagespeed.ce.39SRjpU5Tn.gif" width="16" height="16" border="0">
+		  		</a>
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+	        		<a class="linkMovVincProc" title="Visualizar documento em inteiro teor" href="#?cdDocumento=5" name="M" cddocumento="5">
+	        			Expedição de Termo de Distribuição .
+	        		</a>
+
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Realizada Distribuição do processo por Sorteio em 06/07/2020. Processo incluso automaticamente em pauta de Julgamento Virtual. Ficam as partes intimadas para, querendo, apresentar oposição a esta forma de julgamento nos termos do art. 1º do Provimento-CSM n. 411/2018.</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoClaro" style="">
+			<td width="120" style="vertical-align: top">
+				06/07/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Processo Distribuído por Sorteio
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Órgão Julgador: 27 - 4ª Câmara Cível
+Relator: 56 - Des. Luiz Tadeu Barbosa Silva</span>
+
+
+		  </td>
+		</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="fundoEscuro" style="">
+			<td width="120" style="vertical-align: top">
+				30/06/2020
+			</td>
+		  <td width="20" valign="top" aria-hidden="true">
+
+		  </td>
+		  <td style="vertical-align: top; padding-bottom: 5px">
+
+
+
+
+
+					Recurso Eletrônico Recebido da 1ª Instância
+
+
+
+
+
+		    <br>
+		    <span style="font-style: italic;">Foro de origem: Campo Grande
+Vara de origem: 3ª Vara de Fazenda Pública e de Registros Públicos</span>
+
+
+		  </td>
+		</tr>
+
+
+			</tbody>
+
+
+
+
+</table>
+
+
+	<div id="divLinksTituloBlocoMovimentacoes" style="text-align:right">
+
+
+
+
+
+
+
+
+<input id="mensagemNaoExibidamovimentacoes" type="hidden" value="">
+<input id="linkNaoExibidomovimentacoes" type="hidden" value="<span id=&quot;setasDireitamovimentacoes&quot; class=&quot;setasDireita&quot;><i class=&quot;unj-link-collapse__icon glyph glyph-chevron-up&quot;></i></span>Recolher">
+
+<span id="mensagensExibindomovimentacoes" class="mensagemExibindo">
+
+</span> &nbsp;
+<a id="linkmovimentacoes" href="javascript:" class="linkNaoSelecionado unj-link-collapse">
+    <span id="setasDireitamovimentacoes" class="setasDireita">
+        <i class="unj-link-collapse__icon glyph glyph-chevron-down"></i>
+    </span>
+    Mais</a>
+
+<script>
+	$(function() {
+		var controlarLink = function() {
+			var $linkNaoExibido = $('input#linkNaoExibidomovimentacoes');
+			var conteudoLinkNaoApresentado = $linkNaoExibido.val();
+			var $link = $('a#linkmovimentacoes');
+
+			$linkNaoExibido.val($link.html());
+			$link.html(conteudoLinkNaoApresentado);
+		};
+
+		var controlarMensagem = function() {
+			var $mensagemNaoExibida = $('input#mensagemNaoExibidamovimentacoes');
+			var $spanMensagem = $('span#mensagensExibindomovimentacoes');
+			var mensagemExibida = $spanMensagem.html();
+			var mensagemNaoExibida = $mensagemNaoExibida.val();
+
+			$spanMensagem.html(mensagemNaoExibida);
+			$mensagemNaoExibida.val(mensagemExibida);
+		};
+
+		var controlarMensagemLink = function() {
+			controlarMensagem();
+			controlarLink();
+		};
+
+		var esconderElementosExtrasMostrarDefault = function() {
+			$('#tabelaTodasMovimentacoes').hide();
+			$('#tabelaUltimasMovimentacoes').show();
+		};
+
+		var mostrarElementosExtrasEsconderDefault = function() {
+			$('#tabelaUltimasMovimentacoes').hide();
+			$('#tabelaTodasMovimentacoes').show();
+		};
+
+		var initPagina = function() {
+            var setasDireita = '<span id="setasDireitamovimentacoes" class="setasDireita"><i class="unj-link-collapse__icon glyph glyph-chevron-up"></i></span>';
+			var $linkEscondido = $('input#linkNaoExibidomovimentacoes');
+			$linkEscondido.val(setasDireita+$linkEscondido.val());
+		};
+
+		var bindLink = function() {
+			var $link = $('a#linkmovimentacoes');
+			$link.funcToggle('click', mostrarElementosExtrasEsconderDefault, esconderElementosExtrasMostrarDefault);
+			$link.bind('click', controlarMensagemLink);
+		};
+
+		initPagina();
+		bindLink();
+		esconderElementosExtrasMostrarDefault();
+	});
+</script>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Incidentes, ações incidentais, recursos e execuções de sentenças</h2>
+
+
+</div>
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+
+
+			<tbody><tr>
+			  <td colspan="3" align="left">
+
+
+
+			 			Não há incidentes, ações incidentais, recursos ou execuções de sentenças vinculados a este processo.
+
+
+			  </td>
+		    </tr>
+
+
+</tbody></table>
+<!--  incidentes -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Petições diversas</h2>
+
+
+</div>
+<!--  Tabela de petições diversas -->
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+
+			<thead>
+			    <tr class="label">
+			      <th width="140" style="text-align:left">Data</th>
+			      <th width="*">Tipo</th>
+			    </tr>
+			    <tr class="fundoEscuro" height="2" aria-hidden="true">
+					<td></td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+
+					<tr class="fundoClaro">
+						<td width="140" style="text-align:left">
+							12/07/2020
+						</td>
+						<td width="*">
+							Manifestação do Procurador da Fazenda Pública Estadual<br>
+
+						</td>
+					</tr>
+
+					<tr class="fundoEscuro">
+						<td width="140" style="text-align:left">
+							21/07/2020
+						</td>
+						<td width="*">
+							Manifestação do Autor<br>
+
+						</td>
+					</tr>
+
+					<tr class="fundoClaro">
+						<td width="140" style="text-align:left">
+							06/08/2020
+						</td>
+						<td width="*">
+							Manifestação do Autor<br>
+
+						</td>
+					</tr>
+
+					<tr class="fundoEscuro">
+						<td width="140" style="text-align:left">
+							08/09/2020
+						</td>
+						<td width="*">
+							Manifestação do Autor<br>
+
+						</td>
+					</tr>
+
+			</tbody>
+
+
+
+</table>
+<!--  Tabela de petições diversas -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Composição do Julgamento</h2>
+
+
+</div>
+
+	<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+		<tbody><tr class="label">
+		  <td width="140">Participação</td>
+		  <td>Magistrado</td>
+		</tr>
+		<tr class="fundoEscuro" height="2">
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody></table>
+
+
+
+	<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+		  <tbody><tr class="fundoClaro itemComposicaoJulgamento">
+		    <td valign="top" width="140" class="label" style="padding-bottom: 5px">
+		      Relator
+			</td>
+			<td valign="top" style="padding-bottom: 5px">
+		      Des. Luiz Tadeu Barbosa Silva&nbsp;
+		    </td>
+		  </tr>
+
+		  <tr class="fundoEscuro itemComposicaoJulgamento">
+		    <td valign="top" width="140" class="label" style="padding-bottom: 5px">
+		      2º Vogal
+			</td>
+			<td valign="top" style="padding-bottom: 5px">
+		      Des. Alexandre Bastos&nbsp;
+		    </td>
+		  </tr>
+
+		  <tr class="fundoClaro itemComposicaoJulgamento">
+		    <td valign="top" width="140" class="label" style="padding-bottom: 5px">
+		      3º Vogal
+			</td>
+			<td valign="top" style="padding-bottom: 5px">
+		      Des. Sideni Soncini Pimentel&nbsp;
+		    </td>
+		  </tr>
+
+	</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="padding-top: 10px;">
+
+
+
+
+			<h2 class="subtitle">Julgamentos</h2>
+
+
+</div>
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+
+
+  		<tbody><tr>
+		 	<td colspan="3" align="left">Não há julgamentos para este processo.</td>
+		</tr>
+
+
+</tbody></table>
+
+
+<table style="margin-left:15px; margin-top:1px;" align="center" width="98%" border="0" cellspacing="0" cellpadding="1">
+
+</table>
+
+
+
+
+
+
+
+
+	  	<br>
+	  	<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <nav class="navbar__footer">
+        <div class="navbar__footer__container">
+
+            <ul class="navbar__footer__list-brand">
+                <li class="navbar__footer__list-brand__item">
+                    <a href="https://www.softplan.com.br/solucoes/saj-tribunais/" class="navbar__footer__list-brand__item__link link_softplan_tribunais">
+                        <img src="https://esaj.tjms.jus.br/esaj/img/brand/icon-saj.png.pagespeed.ce.8i3ySP1aN3.png" alt="SAJ">
+                    </a>
+                </li>
+                <li class="navbar__footer__list-brand__item">
+                    <a href="https://www.softplan.com.br/" class="navbar__footer__list-brand__item__link link_softplan">
+                        <img src="https://esaj.tjms.jus.br/esaj/img/brand/icon-softplan.png.pagespeed.ce.7CxA7EI5bb.png" alt="Softplan">
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar__footer__list-actions">
+            </ul>
+        </div>
+    </nav>
+</footer>
+<script>if (window.parent == window) {(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-162743098-1', 'auto', {'siteSpeedSampleRate': 100});ga('send', 'pageview');}</script>
+
+
+
+
+
+
+
+
+	</div>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"b61bdf610d","agent":"","beacon":"bam.nr-data.net","applicationTime":293,"applicationID":"100042430","transactionName":"MlZRN0QECkMAVERZDgscYBdEEBBDIFREWQ4LHFERGAYLXU9EX1YVFV9SDRgWBVpPVEBfEgIdQBdEEBBDT1ZTRAgKXR0wUwQWUwl2U0QICl0=","queueTime":0}</script>
+
+
+
+
+</body></html>
