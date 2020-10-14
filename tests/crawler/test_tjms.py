@@ -98,6 +98,20 @@ def test_tjms_crawler_parse(tjms_crawler, tjms_second_degree_html):
                     }
                 ]
             }
+        ],
+        'updates': [
+            {
+                'date': '08/10/2020',
+                'description': 'Publicação de Pauta de Julgamento  DJ º 4593 de 08 de outubro de 2020'
+            },
+            {
+                'date': '07/10/2020',
+                'description': 'Certidão de Inclusão em Pauta   SEASE - certidão de intimação'
+            },
+            {
+                'date': '06/10/2020',
+                'description': 'Certidão   SEASE - Certidão de Julgamento'
+            }
         ]
     }
     assert expected_result == result

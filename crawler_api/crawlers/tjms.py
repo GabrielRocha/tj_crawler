@@ -23,6 +23,8 @@ class TJMSCrawler(BaseCrawler):
         details = self.parse_legal_process_detail(div_header)
         parties_involved = data.xpath('//table[@id="tableTodasPartes"]|//table[@id="tablePartesPrincipais"]')[-1]
         details['parties_involved'] = self.parse_parties_involved(parties_involved)
+        updates = data.xpath('//tbody[@id="tabelaTodasMovimentacoes"]|//tbody[@id="tabelaUltimasMovimentacoes"]')[-1]
+        details['updates'] = self.parse_updates(updates)
         return details
 
     def parse_legal_process_detail(self, data):
@@ -68,3 +70,17 @@ class TJMSCrawler(BaseCrawler):
             }
             parties_involved.append(item)
         return parties_involved
+
+    def parse_updates(self, data):
+        return [
+            {
+                'date': sanitize_string(row.xpath('.//td[1]/text()').get()),
+                'description': " ".join(
+                    map(
+                        sanitize_string,
+                        row.xpath('.//td[3]/*/text()|.//td[3]/text()').getall()
+                    )
+                ).strip()
+            }
+            for row in data.css('tr')
+        ]
