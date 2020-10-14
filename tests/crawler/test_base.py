@@ -60,4 +60,11 @@ def test_raise_exception_for_parse_method():
 async def test_return_of_execute(fake_crawler):
     fake_crawler.parse = Mock(side_effect=['One', 'Two'])
     result = await fake_crawler.execute(id=123, name='987')
-    assert result == ['One', 'Two']
+    assert list(result) == ['One', 'Two']
+
+
+@pytest.mark.asyncio
+async def test_execute_ignore_empty_results(fake_crawler):
+    fake_crawler.parse = Mock(side_effect=['One', '', None, []])
+    result = await fake_crawler.execute(id=123, name='987')
+    assert list(result) == ['One']
