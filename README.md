@@ -4,7 +4,9 @@ It is a simple API to get legal process detail on TJAL or TJMS website and conve
 
 # Courts
 * TJAL
-* TJMS 
+    * 1º and 2º degree
+* TJMS
+    * 1º and 2º degree 
 
 # Stack
 * Python 3.8

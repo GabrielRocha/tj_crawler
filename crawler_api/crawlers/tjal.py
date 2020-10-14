@@ -1,3 +1,5 @@
+import re
+
 from crawler_api.crawlers.base import BaseCrawler
 
 
@@ -10,12 +12,13 @@ class TJALCrawler(BaseCrawler):
         (
             'https://www2.tjal.jus.br/cposg5/search.do?'
             'cbPesquisa=NUMPROC&tipoNuProcesso=UNIFICADO&dePesquisaNuUnificado={number}'
-        )
+        ),
     )
 
     def parse(self, data):
         details = self.parse_legal_process_detail(data.xpath("//table[@class='secaoFormBody'][ @id='']")[0])
-        details['parties_involved'] = self.parse_parties_involved(data.xpath('//table[@id="tableTodasPartes"]'))
+        parties_involved = data.xpath('//table[@id="tableTodasPartes"]|//table[@id="tablePartesPrincipais"]')[-1]
+        details['parties_involved'] = self.parse_parties_involved(parties_involved)
         return details
 
     def parse_legal_process_detail(self, data):
@@ -40,14 +43,18 @@ class TJALCrawler(BaseCrawler):
             td_label, td_value = tr.xpath('./td')
             type_ = td_label.xpath('./span/text()').get()
             td_value.xpath('br').remove()
-            all_texts = list(map(lambda x: x and str(x).strip(), td_value.xpath('text()').getall()))
-            all_types = list(map(lambda x: x and str(x).strip(), td_value.xpath('span/text()').getall()))
+
+            all_types = map(lambda x: x and str(x).strip(), td_value.xpath('span/text()').getall())
+
+            all_texts = map(lambda x: x and str(x).strip(), td_value.xpath('text()').getall())
+            all_texts = list(filter(lambda x: x and True, all_texts))
+
             representatives = [
                 {
-                    "type": item and item.replace(":", ""),
+                    "type": item and re.sub(':|&nbsp', '', item),
                     "name": all_texts[index]
                 }
-                for index, item in enumerate(all_types, start=1)
+                for index, item in enumerate(filter(lambda x: x and True, all_types), start=1)
             ]
             item = {
                 'type': type_ and type_.strip().replace(":", ""),
