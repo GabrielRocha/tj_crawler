@@ -1,4 +1,7 @@
+import re
+
 from crawler_api.crawlers.base import BaseCrawler
+from crawler_api.crawlers.helper import sanitize_string
 
 
 class TJMSCrawler(BaseCrawler):
@@ -18,6 +21,8 @@ class TJMSCrawler(BaseCrawler):
         if not div_header:
             return
         details = self.parse_legal_process_detail(div_header)
+        parties_involved = data.xpath('//table[@id="tableTodasPartes"]|//table[@id="tablePartesPrincipais"]')[-1]
+        details['parties_involved'] = self.parse_parties_involved(parties_involved)
         return details
 
     def parse_legal_process_detail(self, data):
@@ -36,3 +41,30 @@ class TJMSCrawler(BaseCrawler):
             "judge": judge,
             "value": value and value.replace("  ", "")
         }
+
+    def parse_parties_involved(self, trs):
+        parties_involved = []
+        for tr in trs.css('tr'):
+            td_label, td_value = tr.xpath('./td')
+            type_ = td_label.xpath('./span/text()').get()
+            td_value.xpath('br').remove()
+
+            all_types = map(sanitize_string, td_value.xpath('span/text()').getall())
+
+            all_texts = map(sanitize_string, td_value.xpath('text()').getall())
+            all_texts = list(filter(lambda x: x and True, all_texts))
+
+            representatives = [
+                {
+                    "type": item and re.sub(':|&nbsp', '', item),
+                    "name": all_texts[index]
+                }
+                for index, item in enumerate(filter(lambda x: x and True, all_types), start=1)
+            ]
+            item = {
+                'type': type_ and type_.strip().replace(":", ""),
+                'name': (all_texts and all_texts[0]) or None,
+                "representatives": representatives
+            }
+            parties_involved.append(item)
+        return parties_involved

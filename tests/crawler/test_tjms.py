@@ -27,7 +27,7 @@ def tjms_crawler():
 
 
 def test_tjms_parse_first_degree_legal_process_detail(tjms_crawler, tjms_first_degree):
-    result = tjms_crawler.parse(tjms_first_degree)
+    result = tjms_crawler.parse_legal_process_detail(tjms_first_degree)
     expected_result = {
         'class': 'Procedimento Comum Cível',
         'area': 'Cível',
@@ -40,7 +40,7 @@ def test_tjms_parse_first_degree_legal_process_detail(tjms_crawler, tjms_first_d
 
 
 def test_tjms_parse_second_degree_legal_process_detail(tjms_crawler, tjms_second_degree_html):
-    result = tjms_crawler.parse(tjms_second_degree_html)
+    result = tjms_crawler.parse_legal_process_detail(tjms_second_degree_html)
     expected_result = {
         'class': 'Apelação Cível',
         'area': 'Cível',
@@ -69,11 +69,36 @@ def test_tjms_crawler_parse(tjms_crawler, tjms_second_degree_html):
     result = tjms_crawler.parse(tjms_second_degree_html)
     expected_result = {
         'class': 'Apelação Cível',
-        'area': 'Cível',
-        'subject': 'Obrigação de Fazer / Não Fazer',
+        'area': 'Cível', 'subject': 'Obrigação de Fazer / Não Fazer',
         'distribution': None,
         'judge': None,
-        'value': '10.000,00'
+        'value': '10.000,00',
+        'parties_involved': [
+            {
+                'type': 'Apelante',
+                'name': 'Leidi Silva Ormond Galvão',
+                'representatives': [
+                    {
+                        'type': 'Advogada',
+                        'name': 'Adriana Catelan Skowronski'
+                    },
+                    {
+                        'type': 'Advogada',
+                        'name': 'Ana Silvia Pessoa Salgado Moura'
+                    }
+                ]
+            },
+            {
+                'type': 'Apelado',
+                'name': 'Estado de Mato Grosso do Sul',
+                'representatives': [
+                    {
+                        'type': 'Proc. do Estado',
+                        'name': 'Nathália dos Santos Paes de Barros'
+                    }
+                ]
+            }
+        ]
     }
     assert expected_result == result
 
