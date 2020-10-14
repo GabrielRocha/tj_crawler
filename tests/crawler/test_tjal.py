@@ -58,9 +58,10 @@ def test_tjalcrawler_parse_legal_process_detail_return_empty_value(tjal_crawler)
 
 
 def test_tjalcrawler_parse(tjal_crawler, tjal_result_html):
-    result = tjal_crawler.parse(tjal_result_html)
+    result = tjal_crawler.parse(tjal_result_html, _id='Test')
     expected_result = {
         'class': 'Procedimento Comum Cível',
+        'degree': 'Test',
         'area': 'Cível',
         'subject': 'Dano Material',
         'distribution': '02/05/2018 às 19:01 - Sorteio',
@@ -102,6 +103,6 @@ def test_tjalcrawler_parse(tjal_crawler, tjal_result_html):
     assert expected_result == result
 
 
-def test_tjalcrawler_parse_not_found_data(tjal_crawler):
-    result = tjal_crawler.parse(Selector(text='<table><tbody><tr></tr></tbody></table>'))
+def test_tjal_crawler_parse_not_found_data(tjal_crawler):
+    result = tjal_crawler.parse(Selector(text='<table><tbody><tr></tr></tbody></table>'), None)
     assert result is None

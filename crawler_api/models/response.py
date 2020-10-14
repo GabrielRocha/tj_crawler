@@ -24,6 +24,7 @@ class LegalProcessUpdate(BaseModel):
 
 
 class LegalProcessDetail(BaseModel):
+    degree: str
     class_: str = Field(alias='class')
     area: Optional[str]
     subject: Optional[str]

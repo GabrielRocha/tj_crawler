@@ -66,9 +66,10 @@ def test_tjms_crawler_parse_legal_process_detail_return_empty_value(tjms_crawler
 
 
 def test_tjms_crawler_parse(tjms_crawler, tjms_second_degree_html):
-    result = tjms_crawler.parse(tjms_second_degree_html)
+    result = tjms_crawler.parse(tjms_second_degree_html, 'Test')
     expected_result = {
         'class': 'Apelação Cível',
+        'degree': 'Test',
         'area': 'Cível', 'subject': 'Obrigação de Fazer / Não Fazer',
         'distribution': None,
         'judge': None,

@@ -8,28 +8,28 @@ from crawler_api.crawlers.helper import sanitize_string
 
 
 class BaseCrawler(ABC):
-    urls = []
+    paths = {}
 
     def __init__(self, session):
         self.session = session
 
     async def execute(self, **kwargs):
-        task = [self._start_request(url, **kwargs) for url in self.urls]
+        task = [self._start_request(_id, url, **kwargs) for _id, url in self.paths.items()]
         result = await asyncio.gather(*task)
         return (item for item in result if item)
 
-    async def _start_request(self, url, **kwargs):
+    async def _start_request(self, _id, url, **kwargs):
         async with self.session.get(url.format(**kwargs)) as response:
             data = await response.text()
-        return self.parse(Selector(text=data))
+        return self.parse(Selector(text=data), _id=_id)
 
     @abstractmethod
-    def parse(self, data):
+    def parse(self, data, _id):
         raise NotImplementedError
 
 
 class BaseSoftplanTJCrawler(BaseCrawler):
-    def parse(self, data):
+    def parse(self, data, _id=None):
         result = {
             'parties_involved': self.parse_parties_involved(data),
             'updates': self.parse_updates(data)

@@ -2,23 +2,24 @@ from crawler_api.crawlers.base import BaseSoftplanTJCrawler
 
 
 class TJALCrawler(BaseSoftplanTJCrawler):
-    urls = (
-        (
-            'https://www2.tjal.jus.br/cpopg/search.do?'
-            'cbPesquisa=NUMPROC&dadosConsulta.tipoNuProcesso=UNIFICADO&dadosConsulta.valorConsulta={number}'
+    paths = {
+        '1º': (
+            'https://www2.tjal.jus.br/cpopg/search.do?cbPesquisa=NUMPROC&'
+            'dadosConsulta.tipoNuProcesso=UNIFICADO&dadosConsulta.valorConsulta={number}'
         ),
-        (
-            'https://www2.tjal.jus.br/cposg5/search.do?'
-            'cbPesquisa=NUMPROC&tipoNuProcesso=UNIFICADO&dePesquisaNuUnificado={number}'
-        ),
-    )
+        '2º': (
+            'https://www2.tjal.jus.br/cposg5/search.do?cbPesquisa=NUMPROC&'
+            'tipoNuProcesso=UNIFICADO&dePesquisaNuUnificado={number}'
+        )
+    }
 
-    def parse(self, data):
+    def parse(self, data, _id=None):
         form_detail = data.xpath("//table[@class='secaoFormBody'][ @id='']")
         if not form_detail:
             return
         result = self.parse_legal_process_detail(form_detail[0])
-        result.update(super().parse(data))
+        result['degree'] = _id
+        result.update(super().parse(data, _id))
         return result
 
     def parse_legal_process_detail(self, data):

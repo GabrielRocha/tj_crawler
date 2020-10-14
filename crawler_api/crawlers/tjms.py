@@ -2,22 +2,23 @@ from crawler_api.crawlers.base import BaseSoftplanTJCrawler
 
 
 class TJMSCrawler(BaseSoftplanTJCrawler):
-    urls = (
-        (
+    paths = {
+        '1º': (
             'https://esaj.tjms.jus.br/cpopg5/search.do?cbPesquisa=NUMPROC&'
             'dadosConsulta.tipoNuProcesso=UNIFICADO&dadosConsulta.valorConsulta={number}'
         ),
-        (
+        '2º': (
             'https://esaj.tjms.jus.br/cposg5/search.do?cbPesquisa=NUMPROC&'
             'tipoNuProcesso=UNIFICADO&dePesquisaNuUnificado={number}'
-        ),
-    )
+        )
+    }
 
-    def parse(self, data):
+    def parse(self, data, _id=None):
         div_header = data.xpath("//div[@class='unj-entity-header']")
         if not div_header:
             return
         result = self.parse_legal_process_detail(div_header)
+        result['degree'] = _id
         result.update(super().parse(data))
         return result
 

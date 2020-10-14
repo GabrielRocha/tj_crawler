@@ -1,5 +1,6 @@
 CRAWLER_RESPONSE = {
     'class': 'Apelação Cível',
+    'degree': 'Test',
     'area': 'Cível', 'subject': 'Obrigação de Fazer / Não Fazer',
     'distribution': None,
     'judge': None,
