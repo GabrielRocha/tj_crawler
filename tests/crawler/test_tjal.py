@@ -30,6 +30,13 @@ def tjal_detail_html():
 
 
 @pytest.fixture
+def tjal_updates():
+    path = os.path.dirname(__file__)
+    with open(f'{path}/fixtures/tjal_updates.html') as f:
+        return Selector(text=f.read()).css("tbody")[0]
+
+
+@pytest.fixture
 def tjal_crawler():
     return TJALCrawler(Mock())
 
@@ -108,6 +115,24 @@ def test_tjalcrawler_parse_parties_involved_return_empty_value(tjal_crawler):
     assert expected_result == result
 
 
+def test_tjalcrawler_parse_updates(tjal_crawler, tjal_updates):
+    result = tjal_crawler.parse_updates(tjal_updates)
+    expected_result = [
+        {'date': '23/09/2020', 'description': 'Conclusos'},
+        {'date': '16/08/2020', 'description': 'Visto em Autoinspeção   Despacho Visto em Autoinspeção'},
+        {'date': '11/05/2020', 'description': 'Documento  Nº Protocolo: WMAC.20.70092549-0 Data: 11/05/2020 13:28'},
+        {'date': '10/12/2019', 'description': 'Conclusos'},
+    ]
+    assert expected_result == result
+
+
+def test_tjalcrawler_parse_updates_return_empty_value(tjal_crawler):
+    selector = Selector(text='<table><tbody><tr><td></td><td></td></tr></tbody></table>')
+    result = tjal_crawler.parse_updates(selector)
+    expected_result = [{'date': None, 'description': ''}]
+    assert expected_result == result
+
+
 def test_tjalcrawler_parse(tjal_crawler, tjal_result_html):
     result = tjal_crawler.parse(tjal_result_html)
     expected_result = {
@@ -142,6 +167,12 @@ def test_tjalcrawler_parse(tjal_crawler, tjal_result_html):
                     },
                 ]
             },
+        ],
+        'updates': [
+            {'date': '23/09/2020', 'description': 'Conclusos'},
+            {'date': '16/08/2020', 'description': 'Visto em Autoinspeção   Despacho Visto em Autoinspeção'},
+            {'date': '11/05/2020', 'description': 'Documento  Nº Protocolo: WMAC.20.70092549-0 Data: 11/05/2020 13:28'},
+            {'date': '10/12/2019', 'description': 'Conclusos'},
         ]
     }
     assert expected_result == result

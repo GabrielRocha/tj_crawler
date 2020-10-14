@@ -1,6 +1,7 @@
 import re
 
 from crawler_api.crawlers.base import BaseCrawler
+from crawler_api.crawlers.helper import sanitize_string
 
 
 class TJALCrawler(BaseCrawler):
@@ -19,6 +20,8 @@ class TJALCrawler(BaseCrawler):
         details = self.parse_legal_process_detail(data.xpath("//table[@class='secaoFormBody'][ @id='']")[0])
         parties_involved = data.xpath('//table[@id="tableTodasPartes"]|//table[@id="tablePartesPrincipais"]')[-1]
         details['parties_involved'] = self.parse_parties_involved(parties_involved)
+        updates = data.xpath('//tbody[@id="tabelaTodasMovimentacoes"]|//tbody[@id="tabelaUltimasMovimentacoes"]')[-1]
+        details['updates'] = self.parse_updates(updates)
         return details
 
     def parse_legal_process_detail(self, data):
@@ -44,9 +47,9 @@ class TJALCrawler(BaseCrawler):
             type_ = td_label.xpath('./span/text()').get()
             td_value.xpath('br').remove()
 
-            all_types = map(lambda x: x and str(x).strip(), td_value.xpath('span/text()').getall())
+            all_types = map(sanitize_string, td_value.xpath('span/text()').getall())
 
-            all_texts = map(lambda x: x and str(x).strip(), td_value.xpath('text()').getall())
+            all_texts = map(sanitize_string, td_value.xpath('text()').getall())
             all_texts = list(filter(lambda x: x and True, all_texts))
 
             representatives = [
@@ -63,3 +66,17 @@ class TJALCrawler(BaseCrawler):
             }
             parties_involved.append(item)
         return parties_involved
+
+    def parse_updates(self, data):
+        return [
+            {
+                'date': sanitize_string(row.xpath('.//td[1]/text()').get()),
+                'description': " ".join(
+                    map(
+                        sanitize_string,
+                        row.xpath('.//td[3]/*/text()|.//td[3]/text()').getall()
+                    )
+                ).strip()
+            }
+            for row in data.css('tr')
+        ]
