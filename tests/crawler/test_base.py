@@ -54,3 +54,10 @@ def test_type_error_when_create_a_instance_without_implement_abstract_method():
 def test_raise_exception_for_parse_method():
     with pytest.raises(NotImplementedError):
         BaseCrawler.parse(Mock(), "")
+
+
+@pytest.mark.asyncio
+async def test_return_of_execute(fake_crawler):
+    fake_crawler.parse = Mock(side_effect=['One', 'Two'])
+    result = await fake_crawler.execute(id=123, name='987')
+    assert result == ['One', 'Two']

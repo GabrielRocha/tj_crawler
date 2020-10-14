@@ -12,12 +12,12 @@ class BaseCrawler(ABC):
 
     async def execute(self, **kwargs):
         task = [self._start_request(url, **kwargs) for url in self.urls]
-        await asyncio.gather(*task)
+        return await asyncio.gather(*task)
 
     async def _start_request(self, url, **kwargs):
         async with self.session.get(url.format(**kwargs)) as response:
             data = await response.text()
-        self.parse(Selector(text=data))
+        return self.parse(Selector(text=data))
 
     @abstractmethod
     def parse(self, data):
