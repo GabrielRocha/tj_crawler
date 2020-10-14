@@ -36,6 +36,12 @@ Run a sh into container
 docker-compose run api sh
 ```
 
+Run tests
+```shell script
+docker-compose run api pytest
+```
+
+
 ## Virtualenv
 Install python version using the [pyenv](https://github.com/pyenv/pyenv)
 ```shell script
