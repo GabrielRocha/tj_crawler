@@ -176,3 +176,8 @@ def test_tjalcrawler_parse(tjal_crawler, tjal_result_html):
         ]
     }
     assert expected_result == result
+
+
+def test_tjalcrawler_parse_not_found_data(tjal_crawler):
+    result = tjal_crawler.parse(Selector(text='<table><tbody><tr></tr></tbody></table>'))
+    assert result is None

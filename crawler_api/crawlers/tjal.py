@@ -17,7 +17,10 @@ class TJALCrawler(BaseCrawler):
     )
 
     def parse(self, data):
-        details = self.parse_legal_process_detail(data.xpath("//table[@class='secaoFormBody'][ @id='']")[0])
+        form_detail = data.xpath("//table[@class='secaoFormBody'][ @id='']")
+        if not form_detail:
+            return
+        details = self.parse_legal_process_detail(form_detail[0])
         parties_involved = data.xpath('//table[@id="tableTodasPartes"]|//table[@id="tablePartesPrincipais"]')[-1]
         details['parties_involved'] = self.parse_parties_involved(parties_involved)
         updates = data.xpath('//tbody[@id="tabelaTodasMovimentacoes"]|//tbody[@id="tabelaUltimasMovimentacoes"]')[-1]
