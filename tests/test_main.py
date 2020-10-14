@@ -88,3 +88,13 @@ def test_return_404_for_empty_crawler_result_on_legal_process(client):
         response = client.post('/legal-process', json=data)
     assert response.status_code == 404
     assert response.json() == {"detail": "Legal Process not found"}
+
+
+def test_return_422_for_crawler_not_implemented_result_on_legal_process(client):
+    crawler_mock = Mock()
+    crawler_mock().execute = CoroutineMock(return_value=[])
+    with patch('crawler_api.main.COURTS', {"12": crawler_mock}):
+        data = {'number': '1234567-63.1234.1.23.1234'}
+        response = client.post('/legal-process', json=data)
+    assert response.status_code == 422
+    assert response.json() == {"detail": "Crawler not implemented"}

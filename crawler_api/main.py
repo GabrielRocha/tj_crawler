@@ -22,7 +22,10 @@ app = FastAPI(
 )
 async def show_legal_process_detail(legal_process: LegalProcess) -> LegalProcessDetailResponse:
     async with ClientSession() as session:
-        crawler = COURTS[legal_process.court](session)
+        try:
+            crawler = COURTS[legal_process.court](session)
+        except KeyError:
+            raise HTTPException(status_code=422, detail="Crawler not implemented")
         result = tuple(await crawler.execute(number=legal_process.number))
     if not result:
         raise HTTPException(status_code=404, detail="Legal Process not found")
