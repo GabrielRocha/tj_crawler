@@ -1,7 +1,8 @@
-from crawler_api.crawlers.base import BaseSoftplanTJCrawler
+from crawler_api.crawlers.base import BaseCrawler
+from crawler_api.crawlers.mixins import SoftplanTJCrawlerMixin
 
 
-class TJALCrawler(BaseSoftplanTJCrawler):
+class TJALCrawler(SoftplanTJCrawlerMixin, BaseCrawler):
     paths = {
         '1º': (
             'https://www2.tjal.jus.br/cpopg/search.do?cbPesquisa=NUMPROC&'
@@ -19,7 +20,8 @@ class TJALCrawler(BaseSoftplanTJCrawler):
             return
         result = self.parse_legal_process_detail(form_detail[0])
         result['degree'] = _id
-        result.update(super().parse(data, _id))
+        result['parties_involved'] = self.parse_parties_involved(data)
+        result['updates'] = self.parse_updates(data)
         return result
 
     def parse_legal_process_detail(self, data):
