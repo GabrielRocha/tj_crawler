@@ -4,13 +4,14 @@ import pytest
 from asynctest import CoroutineMock, patch
 from fastapi.testclient import TestClient
 
-from crawler_api.main import app
+from crawler_api.main import app, http_async_session, shutdown_event, startup
 
 from tests.fixtures import CRAWLER_RESPONSE
 
 
 @pytest.fixture
 def client():
+    http_async_session.start()
     return TestClient(app)
 
 
@@ -98,3 +99,17 @@ def test_return_422_for_crawler_not_implemented_result_on_legal_process(client):
         response = client.post('/legal-process', json=data)
     assert response.status_code == 422
     assert response.json() == {"detail": "Crawler not implemented"}
+
+
+@patch('crawler_api.main.http_async_session')
+def test_event_startup(mock_http_async_session):
+    startup()
+    mock_http_async_session.start.assert_called_once()
+
+
+@pytest.mark.asyncio
+@patch('crawler_api.main.http_async_session')
+async def test_event_shutdown_event(mock_http_async_session):
+    mock_http_async_session.stop = CoroutineMock()
+    await shutdown_event()
+    mock_http_async_session.stop.assert_called_once()
