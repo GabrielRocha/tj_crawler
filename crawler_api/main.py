@@ -45,4 +45,4 @@ async def show_legal_process_detail(
     result = tuple(await crawler.execute(number=legal_process.number))
     if not result:
         raise HTTPException(status_code=404, detail="Legal Process not found")
-    return LegalProcessDetailResponse(degrees=tuple(result))
+    return LegalProcessDetailResponse(degrees=result)

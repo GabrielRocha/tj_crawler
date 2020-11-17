@@ -26,7 +26,7 @@ class LegalProcess(BaseModel):
         Legal Process Number = 'NNNNNNN-DV.AAAA.J.TR.OOOO'
         NNNNNNNAAAAJTROOOO Mod 97 Base 10 == DV
         :param value:
-        :return: boolean
+        :return: value
         """
         legal_process_id = int(value[:7])
         check_digit = int(value[8:10])
